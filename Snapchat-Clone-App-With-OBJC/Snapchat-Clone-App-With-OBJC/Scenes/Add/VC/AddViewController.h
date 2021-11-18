@@ -6,13 +6,16 @@
 //
 
 #import <UIKit/UIKit.h>
+
 #import <FirebaseDatabase/FirebaseDatabase.h>
 #import <FirebaseAuth/FirebaseAuth.h>
 #import <FirebaseStorage/FirebaseStorage.h>
 
+#import "CustomViewControllersProtocol.h"
+
 NS_ASSUME_NONNULL_BEGIN
 
-@interface AddViewController : UIViewController <UINavigationControllerDelegate,UIImagePickerControllerDelegate>
+@interface AddViewController : UIViewController <CustomViewControllersProtocol, UINavigationControllerDelegate,  UIImagePickerControllerDelegate>
     @property (strong, nonatomic) NSString* username;
 @end
 

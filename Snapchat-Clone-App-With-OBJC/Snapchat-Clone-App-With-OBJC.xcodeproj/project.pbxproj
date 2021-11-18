@@ -85,6 +85,7 @@
 		B19BD534274576F4000E13CE /* ListOfContatcsTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ListOfContatcsTableViewController.m; sourceTree = "<group>"; };
 		B19BD5362745C395000E13CE /* MessageViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MessageViewController.h; sourceTree = "<group>"; };
 		B19BD5372745C395000E13CE /* MessageViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MessageViewController.m; sourceTree = "<group>"; };
+		B19BD55A2745EE04000E13CE /* CustomViewControllersProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CustomViewControllersProtocol.h; sourceTree = "<group>"; };
 		DB1E26CD18517AC6A30B1661 /* Pods_Snapchat_Clone_App_With_OBJC.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Snapchat_Clone_App_With_OBJC.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F73761AFFD6EC61BD0D0E9ED /* Pods-Snapchat-Clone-App-With-OBJC.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Snapchat-Clone-App-With-OBJC.debug.xcconfig"; path = "Target Support Files/Pods-Snapchat-Clone-App-With-OBJC/Pods-Snapchat-Clone-App-With-OBJC.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -555,6 +556,7 @@
 		B19BD5582745DFA4000E13CE /* Protocols */ = {
 			isa = PBXGroup;
 			children = (
+				B19BD55A2745EE04000E13CE /* CustomViewControllersProtocol.h */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
