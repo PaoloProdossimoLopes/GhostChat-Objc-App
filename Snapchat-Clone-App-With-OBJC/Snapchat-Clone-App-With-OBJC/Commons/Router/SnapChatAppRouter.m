@@ -84,4 +84,12 @@
     return vc;
 }
 
+- (UIViewController*)routeToListOfContacts {
+    ListOfContatcsTableViewController *vc = [[ListOfContatcsTableViewController alloc] init];
+    ListOfContatctsViewModel *viewModel = [[ListOfContatctsViewModel alloc]init];
+    
+    vc.viewModel = viewModel;
+    return vc;
+}
+
 @end

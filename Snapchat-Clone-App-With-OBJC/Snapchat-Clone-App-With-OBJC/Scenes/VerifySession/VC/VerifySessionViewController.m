@@ -6,7 +6,6 @@
 //
 
 #import "VerifySessionViewController.h"
-#import "SnapChatAppRouter.h"
 
 @interface VerifySessionViewController()
     @property (strong, nonatomic) IBOutlet UIActivityIndicatorView * loaderIndicator;

@@ -9,12 +9,15 @@
 
 #import <FirebaseAnalytics/FirebaseAnalytics.h>
 #import <FirebaseDatabase/FirebaseDatabase.h>
+#import <FirebaseAuth/FirebaseAuth.h>
 
 #import "ListOfContatcsTableViewController.h"
 #import "MessageViewController.h"
 #import "CustomViewControllersProtocol.h"
 #import "HomeViewModel.h"
 #import "ListOfContatctsViewModel.h"
+
+#import "SnapChatAppRouter.h"
 
 NS_ASSUME_NONNULL_BEGIN
 

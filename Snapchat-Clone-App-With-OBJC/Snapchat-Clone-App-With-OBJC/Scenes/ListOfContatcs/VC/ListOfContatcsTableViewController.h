@@ -6,11 +6,11 @@
 //
 
 #import <UIKit/UIKit.h>
-
 #import <FirebaseDatabase/FirebaseDatabase.h>
 
 #import "ListOfContatctsViewModel.h"
 #import "AddViewController.h"
+#import "AddViewModel.h"
 
 NS_ASSUME_NONNULL_BEGIN
 

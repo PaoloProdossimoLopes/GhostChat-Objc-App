@@ -18,14 +18,8 @@
     NSString *imagePath = [NSString stringWithFormat: @"/images/%@", keys];
     FIRStorageReference *imageRef = [ref child: imagePath];
     [imageRef dataWithMaxSize:(5 * 1024 * 1024) completion:^(NSData * _Nullable data, NSError * _Nullable error) {
-            if (error == nil && data != nil) {
-//                self.imageMessageView.image = [[UIImage alloc]initWithData: data];
-                sucsessCompletion([[UIImage alloc]initWithData: data]);
-            } else {
-//                NSLog(@"DEBUG: Error %@", error.localizedDescription);
-//                self.imageMessageView.image = [[UIImage alloc] init];
-                failureCompletionfailureCompletion();
-            }
+            if (error == nil && data != nil) { sucsessCompletion([[UIImage alloc]initWithData: data]); }
+            else { failureCompletionfailureCompletion(); }
     }];
 }
 

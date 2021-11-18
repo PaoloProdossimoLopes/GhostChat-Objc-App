@@ -13,4 +13,5 @@
 - (UIViewController*)routeToSignUpView;
 - (UIViewController*)routeToSignInView;
 - (UIViewController*)routeToMessageView:(NSMutableArray*)message key:(NSString*)key;
+- (UIViewController*)routeToListOfContacts;
 @end

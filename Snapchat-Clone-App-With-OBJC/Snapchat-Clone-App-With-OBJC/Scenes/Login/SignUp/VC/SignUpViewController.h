@@ -10,6 +10,10 @@
 #import <FirebaseDatabase/FirebaseDatabase.h>
 
 #import "SignUpViewModel.h"
+#import "HomeTableViewController.h"
+#import "UIViewController+AlertExtension.h"
+#import "SnapChatAppRouter.h"
+#import "SignUpViewModel.h"
 
 NS_ASSUME_NONNULL_BEGIN
 

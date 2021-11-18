@@ -11,8 +11,8 @@
 #import "SplashViewController.h"
 #import "HomeTableViewController.h"
 #import "HomeViewModel.h"
-
 #import "VerifySessionViewModel.h"
+#import "SnapChatAppRouter.h"
 
 NS_ASSUME_NONNULL_BEGIN
 

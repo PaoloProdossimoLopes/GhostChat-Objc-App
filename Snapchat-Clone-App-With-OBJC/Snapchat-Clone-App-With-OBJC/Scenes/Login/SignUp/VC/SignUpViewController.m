@@ -6,10 +6,6 @@
 //
 
 #import "SignUpViewController.h"
-#import "HomeTableViewController.h"
-#import "UIViewController+AlertExtension.h"
-#import "SnapChatAppRouter.h"
-#import "SignUpViewModel.h"
 
 @interface SignUpViewController()
 
@@ -57,6 +53,12 @@
 
 # pragma mark - Helpers
 
+- (void)navigateToHomeView {
+        [self presentViewController:[[SnapChatAppRouter shared] routeToHomeNavigationViewController] animated:YES completion:NULL];
+}
+
+# pragma mark - API
+
 - (void)submitYourInformations {
     NSDictionary * signUpParameters = [[NSDictionary alloc] init];
     
@@ -102,10 +104,6 @@
         [self showCustomAlertDefault];
     }];
     
-}
-
-- (void)navigateToHomeView {
-        [self presentViewController:[[SnapChatAppRouter shared] routeToHomeNavigationViewController] animated:YES completion:NULL];
 }
 
 @end

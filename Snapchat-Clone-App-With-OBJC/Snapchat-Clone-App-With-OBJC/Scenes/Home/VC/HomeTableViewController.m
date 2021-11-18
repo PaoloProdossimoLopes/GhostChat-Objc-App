@@ -6,9 +6,6 @@
 //
 
 #import "HomeTableViewController.h"
-#import "SnapChatAppRouter.h"
-
-@import Firebase;
 
 @interface HomeTableViewController()
     @property (strong, nonatomic) UIBarButtonItem * addButton;
@@ -89,13 +86,9 @@
 #pragma mark - Selectors
 
 - (void)addButtonHandleTapped {
-    NSLog(@"DEBUG: Button tapped!");
-    ListOfContatcsTableViewController * vc = [[ListOfContatcsTableViewController alloc] init];
-    ListOfContatctsViewModel *viewModel = [[ListOfContatctsViewModel alloc]init];
-    
-    vc.viewModel = viewModel;
-    
-    [[self navigationController] pushViewController:vc animated:YES];
+    [[self navigationController]
+     pushViewController: [[SnapChatAppRouter shared] routeToListOfContacts]
+     animated:YES];
 }
 
 #pragma mark - Table view data source
@@ -106,8 +99,7 @@
     UIViewController *vc = [[SnapChatAppRouter shared]
                             routeToMessageView:self.viewModel.messagesArray[indexPath.row]
                             key: self.viewModel.keys[indexPath.row]];
-    [[self navigationController] pushViewController:vc
-                                           animated:YES];
+    [[self navigationController] pushViewController:vc animated:YES];
 }
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {

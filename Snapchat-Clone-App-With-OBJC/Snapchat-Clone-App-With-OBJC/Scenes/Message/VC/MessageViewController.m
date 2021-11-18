@@ -7,8 +7,6 @@
 
 #import "MessageViewController.h"
 
-@import Firebase;
-
 @interface MessageViewController()
     @property (strong, nonatomic) UIImageView *imageMessageView;
     @property (strong, nonatomic) UILabel *messageLabel;

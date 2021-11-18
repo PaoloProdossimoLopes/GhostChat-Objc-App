@@ -6,11 +6,6 @@
 //
 
 #import "ListOfContatcsTableViewController.h"
-#import "AddViewModel.h"
-
-@interface ListOfContatcsTableViewController ()
-//    @property (strong, nonatomic) NSMutableArray *recepientsArray;
-@end
 
 @implementation ListOfContatcsTableViewController
 

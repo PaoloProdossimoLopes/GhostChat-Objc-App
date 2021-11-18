@@ -7,10 +7,6 @@
 
 #import "AddViewModel.h"
 
-#import <FirebaseDatabase/FirebaseDatabase.h>
-#import <FirebaseAuth/FirebaseAuth.h>
-#import <FirebaseStorage/FirebaseStorage.h>
-
 @implementation AddViewModel
 
 - (void)saveDataOnFirebase: (NSString*)textFieldText username:(NSString*)username imagePlaceHoler:(UIImage*)imagePlaceholder callBack:(void(^)(void))completion {

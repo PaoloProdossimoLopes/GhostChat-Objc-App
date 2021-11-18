@@ -6,7 +6,6 @@
 //
 
 #import "SplashViewController.h"
-#import "SnapChatAppRouter.h"
 
 //MARK: - Interface
 
