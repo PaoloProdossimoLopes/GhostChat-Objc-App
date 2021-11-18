@@ -6,6 +6,7 @@
 //
 
 @protocol CustomViewControllersProtocol
+
 @required
     - (void)commonInit;
     - (void)configureViewHierarchy;

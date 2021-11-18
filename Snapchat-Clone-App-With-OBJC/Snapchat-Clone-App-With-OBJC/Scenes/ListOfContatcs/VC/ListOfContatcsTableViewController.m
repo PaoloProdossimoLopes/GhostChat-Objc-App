@@ -15,15 +15,12 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [self configureUI];
+    
+    self.title = @"List of contatcs";
     [self getReceipts];
 }
 
 #pragma mark - Helpers
-
-- (void)configureUI {
-    self.title = @"List of contatcs";
-}
 
 - (AddViewController*)routeToAddNew {
     AddViewController * vc = [[AddViewController alloc] init];

@@ -27,7 +27,7 @@
                         parameters:@{kFIRParameterItemID: @"HomeViewController",
                                      kFIRParameterItemName: @"HomeViewController"}];
     [self getMessages];
-    [self configureUI];
+    [self commonInit];
 }
 
 - (void)viewWillAppear:(BOOL)animated {
@@ -35,33 +35,48 @@
     [self.tableView reloadData];
 }
 
-#pragma mark - Helpres
+#pragma mark - CustomViewControllerprotocol
 
-- (void)configureUI {
+- (void)commonInit {
+    [self initializeProperties];
+    [self configureViewHierarchy];
+    [self configureConstraints];
+    [self configureStyle];
+    [self configureAction];
+}
+
+- (void)initializeProperties {
+    self.addButton = [[UIBarButtonItem alloc] init];
+    self.logoutButton = [[UIBarButtonItem alloc] init];
+}
+
+- (void)configureViewHierarchy {
+    self.navigationItem.rightBarButtonItem = self.addButton;
+    self.navigationItem.leftBarButtonItem = self.logoutButton;
+}
+
+- (void)configureConstraints { }
+
+- (void)configureStyle {
     self.title = @"Home";
     self.view.backgroundColor = UIColor.whiteColor;
     
-    [self configureNavigationBar];
-}
-
-- (void)configureNavigationBar {
-    self.addButton = [[UIBarButtonItem alloc] init];
-    self.logoutButton = [[UIBarButtonItem alloc] init];
-    
     self.addButton.tintColor = UIColor.blackColor;
-    
     [self.addButton setImage: [UIImage systemImageNamed:@"plus"]];
-    [self.addButton setTarget: self];
-    [self.addButton setAction:@selector(addButtonHandleTapped)];
     
     self.logoutButton.tintColor = UIColor.orangeColor;
     [self.logoutButton setTitle:@"Logout"];
+    
+}
+
+#pragma mark - Helpers
+
+- (void)configureAction {
+    [self.addButton setTarget: self];
+    [self.addButton setAction:@selector(addButtonHandleTapped)];
+    
     [self.logoutButton setTarget: self];
     [self.logoutButton setAction:@selector(logoutFirebaseSession)];
-    
-    self.navigationItem.rightBarButtonItem = self.addButton;
-    self.navigationItem.leftBarButtonItem = self.logoutButton;
-
 }
 
 - (void)logoutFirebaseSession {
@@ -152,6 +167,7 @@
         return cell;
     }
 }
+
 
 @end
 

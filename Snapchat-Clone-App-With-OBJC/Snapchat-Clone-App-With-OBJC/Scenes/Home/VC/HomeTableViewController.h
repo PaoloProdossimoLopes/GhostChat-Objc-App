@@ -12,10 +12,11 @@
 
 #import "ListOfContatcsTableViewController.h"
 #import "MessageViewController.h"
+#import "CustomViewControllersProtocol.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface HomeTableViewController : UITableViewController
+@interface HomeTableViewController : UITableViewController <CustomViewControllersProtocol>
     
 @end
 
