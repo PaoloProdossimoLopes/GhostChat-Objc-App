@@ -15,6 +15,9 @@
 #import "MessageViewController.h"
 #import "MessageViewModel.h"
 
+#import "SignUpViewController.h"
+#import "SignUpViewModel.h"
+
 @interface SnapChatAppRouter()
 
 - (instancetype)init NS_UNAVAILABLE;
@@ -56,9 +59,10 @@
 - (UIViewController*)routeToSignUpView {
     UIStoryboard *sb = [UIStoryboard storyboardWithName:@"SignUp" bundle:nil];
     
-    UIViewController *vc = [sb instantiateViewControllerWithIdentifier:@"SignUpViewController"];
+    SignUpViewController *vc = [sb instantiateViewControllerWithIdentifier:@"SignUpViewController"];
+    SignUpViewModel *viewModel = [[SignUpViewModel alloc] init];
     
-    
+    vc.viewModel = viewModel;
     return vc;
 }
 

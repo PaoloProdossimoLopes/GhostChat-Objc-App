@@ -73,12 +73,6 @@
 
 - (void)registerNewAccountInFirebase: (NSDictionary*)dict {
     
-    [self.viewModel registerNewAccountInFirebase: dict successCompletion:^(FIRAuthDataResult * _Nullable authResult){
-            [self saveOnDataBase: authResult.user userInfo: dict];
-        } failureCompletion:^(NSError * _Nonnull error) {
-            [self showCustomAlertDefault];
-        }];
-    
     [self.viewModel
      registerNewAccountInFirebase: dict
      successCompletion:^(FIRAuthDataResult * _Nonnull authResult) {
