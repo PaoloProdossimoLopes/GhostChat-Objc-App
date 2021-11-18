@@ -6,8 +6,6 @@
 //
 
 #import "ListOfContatcsTableViewController.h"
-#import <FirebaseDatabase/FirebaseDatabase.h>
-#import "AddViewController.h"
 
 @interface ListOfContatcsTableViewController ()
     @property (strong, nonatomic) NSMutableArray *recepientsArray;

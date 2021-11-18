@@ -21,6 +21,17 @@
 
 @implementation SplashViewController
 
+#pragma mark - Lifecycle
+
+- (void)viewDidLoad {
+    [super viewDidLoad];
+    
+    self.singUpButton.layer.cornerRadius = self.singUpButton.frame.size.height/2;
+    self.signinButton.layer.cornerRadius = self.signinButton.frame.size.height/2;
+}
+
+#pragma mark - Selectors
+
 - (IBAction)signUpButtonHandleTapped: (id)sender {
     UIStoryboard *sb = [UIStoryboard storyboardWithName:@"SignUp" bundle:nil];
     

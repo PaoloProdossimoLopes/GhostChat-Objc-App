@@ -8,10 +8,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--SplashView-->
+        <!--Splash View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController storyboardIdentifier="SplashViewController" title="SplashView" id="BYZ-38-t0r" customClass="SplashViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SplashViewController" id="BYZ-38-t0r" customClass="SplashViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -19,7 +19,7 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="GhostChat" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3OW-VU-ptI" userLabel="AppTitleLabel">
                                 <rect key="frame" x="16" y="74" width="382" height="36"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="r6S-Na-QVI" userLabel="ButtonsStackView">
@@ -57,12 +57,22 @@
                                     </button>
                                 </subviews>
                             </stackView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ghost" translatesAutoresizingMaskIntoConstraints="NO" id="eLy-H4-d5D">
+                                <rect key="frame" x="107" y="307" width="200" height="200"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="c4k-TT-S9e"/>
+                                    <constraint firstAttribute="height" constant="200" id="e9h-xS-ykA"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemOrangeColor"/>
                         <constraints>
                             <constraint firstItem="3OW-VU-ptI" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="30" id="CTE-Nb-bBg"/>
+                            <constraint firstItem="eLy-H4-d5D" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="107" id="GrN-dS-cBk"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="eLy-H4-d5D" secondAttribute="trailing" constant="107" id="TBM-aJ-7R7"/>
                             <constraint firstItem="3OW-VU-ptI" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="YyO-xa-XaR"/>
+                            <constraint firstItem="r6S-Na-QVI" firstAttribute="top" secondItem="eLy-H4-d5D" secondAttribute="bottom" constant="45" id="iah-Om-fJJ"/>
                             <constraint firstItem="r6S-Na-QVI" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="pLy-Z9-hGr"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="3OW-VU-ptI" secondAttribute="trailing" constant="16" id="pd3-gt-wiH"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="r6S-Na-QVI" secondAttribute="bottom" constant="200" id="qD2-FC-JGT"/>
@@ -79,6 +89,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="ghost" width="500" height="500"/>
         <systemColor name="systemOrangeColor">
             <color red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>

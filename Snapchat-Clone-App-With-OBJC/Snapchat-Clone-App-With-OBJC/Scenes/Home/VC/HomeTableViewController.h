@@ -6,8 +6,12 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "ListOfContatcsTableViewController.h"
+
 #import <FirebaseAnalytics/FirebaseAnalytics.h>
+#import <FirebaseDatabase/FirebaseDatabase.h>
+
+#import "ListOfContatcsTableViewController.h"
+#import "MessageViewController.h"
 
 NS_ASSUME_NONNULL_BEGIN
 

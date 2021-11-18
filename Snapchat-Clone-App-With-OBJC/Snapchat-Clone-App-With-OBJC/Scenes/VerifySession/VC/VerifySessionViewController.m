@@ -16,8 +16,6 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self checkIfUserAreLogged];
-    
-//    [[FIRAuth auth] signOut:NULL];
 }
 
 - (void)checkIfUserAreLogged {

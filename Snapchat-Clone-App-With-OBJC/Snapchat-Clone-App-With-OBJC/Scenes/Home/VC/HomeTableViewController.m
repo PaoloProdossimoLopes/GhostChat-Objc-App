@@ -6,13 +6,13 @@
 //
 
 #import "HomeTableViewController.h"
-#import <FirebaseDatabase/FirebaseDatabase.h>
-#import "MessageViewController.h"
 
 @import Firebase;
 
 @interface HomeTableViewController()
     @property (strong, nonatomic) UIBarButtonItem * addButton;
+    @property (strong, nonatomic) UIBarButtonItem *logoutButton;
+
     @property (strong, nonatomic) NSMutableArray * messagesArray;
     @property (strong, nonatomic) NSArray<NSString*> * keys;
 @end
@@ -46,6 +46,7 @@
 
 - (void)configureNavigationBar {
     self.addButton = [[UIBarButtonItem alloc] init];
+    self.logoutButton = [[UIBarButtonItem alloc] init];
     
     self.addButton.tintColor = UIColor.blackColor;
     
@@ -53,15 +54,25 @@
     [self.addButton setTarget: self];
     [self.addButton setAction:@selector(addButtonHandleTapped)];
     
+    self.logoutButton.tintColor = UIColor.orangeColor;
+    [self.logoutButton setTitle:@"Logout"];
+    [self.logoutButton setTarget: self];
+    [self.logoutButton setAction:@selector(logoutFirebaseSession)];
+    
     self.navigationItem.rightBarButtonItem = self.addButton;
+    self.navigationItem.leftBarButtonItem = self.logoutButton;
 
+}
+
+- (void)logoutFirebaseSession {
+    [[FIRAuth auth] signOut: NULL];
+    [self dismissViewControllerAnimated:YES completion:NULL];
 }
 
 - (void)getMessages {
     NSString *userID = [FIRAuth auth].currentUser.uid;
     FIRDatabaseReference *dataBaseRef = [[FIRDatabase database] reference];
     FIRDatabaseQuery *messageQuery = [[dataBaseRef child:@"messages"] child:userID];
-//    FIRDatabaseQuery *messageQuery = [dataBaseRef child:@"messages"];
     FIRDatabaseReference *ref = messageQuery.ref;
     [ref observeEventType:FIRDataEventTypeValue withBlock:^(FIRDataSnapshot * _Nonnull snapshot) {
         if (snapshot.value == [NSNull null]) {

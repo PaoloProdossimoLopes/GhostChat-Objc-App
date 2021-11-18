@@ -22,6 +22,14 @@
 
 @implementation SignUpViewController
 
+//MARK: - Lifecycle
+
+- (void)viewDidLoad {
+    [super viewDidLoad];
+    self.registerButton.layer.cornerRadius = self.registerButton.frame.size.height/2;
+    self.navigationController.navigationBar.tintColor = UIColor.orangeColor;
+}
+
 //MARK: - IBActions
 
 - (IBAction)registerButtonHandleTapped: (id)sender {

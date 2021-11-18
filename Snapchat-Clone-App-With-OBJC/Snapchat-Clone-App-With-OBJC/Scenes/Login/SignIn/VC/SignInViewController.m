@@ -18,6 +18,17 @@
 
 @implementation SignInViewController
 
+#pragma mark - Lifecycle
+
+- (void)viewDidLoad {
+    [super viewDidLoad];
+    
+    self.loginButton.layer.cornerRadius = self.loginButton.frame.size.height/2;
+    self.navigationController.navigationBar.tintColor = UIColor.orangeColor;
+}
+
+#pragma mark - Selectors
+
 - (IBAction)loginButtonHandleTapped {
     
     BOOL isValid = (self.emailTextField.text.length > 0 &&

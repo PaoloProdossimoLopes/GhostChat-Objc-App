@@ -29,7 +29,7 @@ CGFloat imageViewSize = 300;
 #pragma mark - Helpers
 
 - (void)commonInit {
-    self.view.backgroundColor = UIColor.orangeColor;
+    self.view.backgroundColor = UIColor.whiteColor;
     
     [self confgureNavigationBar];
     [self configureImagePlaceholder];
@@ -49,14 +49,16 @@ CGFloat imageViewSize = 300;
 }
 
 - (void)confgureNavigationBar {
-    self.title = self.username;
+    self.title = [NSString stringWithFormat: @"To: %@", self.username];
     self.navigationController.navigationBar.tintColor = UIColor.blackColor;
 }
 
 - (void)configureImagePlaceholder {
     self.imageViewPlaceholder = [[UIImageView alloc] init];
+    self.imageViewPlaceholder.image = [UIImage imageNamed:@"addPhotoPlaceholder"];
     
     self.imageViewPlaceholder.translatesAutoresizingMaskIntoConstraints = NO;
+    self.imageViewPlaceholder.clipsToBounds = true;
     self.imageViewPlaceholder.backgroundColor = UIColor.blackColor;
     self.imageViewPlaceholder.layer.cornerRadius = imageViewSize/2;
     
@@ -94,14 +96,14 @@ CGFloat imageViewSize = 300;
     self.addNote.rightView = leftView;
     self.addNote.rightViewMode = UITextFieldViewModeAlways;
     
-    self.addNote.backgroundColor = UIColor.whiteColor;
+    self.addNote.backgroundColor = UIColor.systemGray5Color;
     self.addNote.layer.cornerRadius = 5;
     
     [NSLayoutConstraint activateConstraints: @[
         [self.addNote.topAnchor
          constraintEqualToAnchor: self.imageViewPlaceholder.bottomAnchor constant: 50],
         [self.addNote.widthAnchor constraintEqualToConstant: self.view.frame.size.width - 40],
-        [self.addNote.heightAnchor constraintEqualToConstant:80],
+        [self.addNote.heightAnchor constraintEqualToConstant: 50],
         [self.addNote.centerXAnchor constraintEqualToAnchor: self.view.centerXAnchor]
     ]];
     
@@ -109,13 +111,19 @@ CGFloat imageViewSize = 300;
 
 - (void)configureSendAMessageButton {
     
+    [self.sendAMessage setTitleColor: UIColor.whiteColor forState: UIControlStateNormal];
     [self.sendAMessage setTitle:@"Send a message" forState: UIControlStateNormal];
+    self.sendAMessage.backgroundColor = UIColor.orangeColor;
     
     [NSLayoutConstraint activateConstraints: @[
         [self.sendAMessage.topAnchor
          constraintEqualToAnchor: self.addNote.bottomAnchor constant:50],
+        [self.sendAMessage.heightAnchor constraintEqualToConstant:50],
+        [self.sendAMessage.widthAnchor constraintEqualToConstant:200],
         [self.sendAMessage.centerXAnchor constraintEqualToAnchor:self.view.centerXAnchor]
     ]];
+    
+    self.sendAMessage.layer.cornerRadius = 50/2;
     
     [self.sendAMessage addTarget: self
                           action: @selector(sendAMessageButtonAndleTapped)
@@ -180,9 +188,10 @@ CGFloat imageViewSize = 300;
     FIRStorageMetadata *metaData = [FIRStorageMetadata new];
     metaData.contentType = @"image/jpeg";
     
-    [imageRef putData:imageData metadata:metaData completion:^(FIRStorageMetadata * _Nullable metadata, NSError * _Nullable error) {
+    [imageRef putData: imageData metadata: metaData completion:^(FIRStorageMetadata * _Nullable metadata, NSError * _Nullable error) {
             if (error != nil) {
                 NSLog(@"DEBUG: Error %@", error.localizedDescription);
+                self.imageViewPlaceholder.image = [UIImage imageNamed:@"addPhotoPlaceholder"];
             } else {
                 NSLog(@"DEBUG: Success");
             }
