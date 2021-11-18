@@ -6,8 +6,11 @@
 //
 
 #import "SignInViewController.h"
+#import "SnapChatAppRouter.h"
 
 @interface SignInViewController()
+
+@property (strong, nonatomic) SnapChatAppRouter *router;
 
 @property (strong, nonatomic) IBOutlet UITextField * emailTextField;
 @property (strong, nonatomic) IBOutlet UITextField * passwordTextField;
@@ -22,6 +25,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    self.router = [[SnapChatAppRouter alloc] init];
     [self configureUI];
 }
 
@@ -35,50 +40,25 @@
 #pragma mark - Selectors
 
 - (IBAction)loginButtonHandleTapped {
-    
-    BOOL isValid = (self.emailTextField.text.length > 0 &&
-                    self.passwordTextField.text.length > 0);
-    
-    if (isValid) { [self checkIfUserAlreadyRegistered]; }
-    else { [self showError]; }
-    
+    [self checkIfUserAlreadyRegistered];
 }
 
 - (void)checkIfUserAlreadyRegistered {
-    
-    [[FIRAuth auth] signInWithEmail: self.emailTextField.text
-                           password: self.passwordTextField.text
-                         completion:^(FIRAuthDataResult * _Nullable authResult, NSError * _Nullable error) {
+    [self.viewModel
+     checkIfUserAlreadyRegistered:self.emailTextField.text
+     password: self.passwordTextField.text successCompletion:^{
+        [self goToHomeView];
         
-        if (error == nil) { [self goToHomeView]; }
-        else { [self showError]; }
+    } failureCompletion:^(NSError * _Nonnull error) {
+        [self showCustomAlertDefault];
     }];
     
 }
 
 - (void)goToHomeView {
-    
-    UIViewController * vc = [[HomeTableViewController alloc] init];
-    UINavigationController * nav = [[UINavigationController alloc] initWithRootViewController:vc];
-    nav.modalPresentationStyle = UIModalPresentationFullScreen;
-    
-    [self presentViewController:nav animated:YES completion:NULL];
-}
-
-- (void)showError {
-    
-    UIAlertController * alert = [UIAlertController
-                                 alertControllerWithTitle: @"Oops"
-                                 message: @"Plese make sure all fields are filled out"
-                                 preferredStyle: UIAlertControllerStyleAlert];
-    UIAlertAction * action = [UIAlertAction
-                              actionWithTitle: @"OK"
-                              style: UIAlertActionStyleDefault
-                              handler: NULL];
-    
-    [alert addAction: action];
-    
-    [self presentViewController:alert animated:YES completion:NULL];
+    [self presentViewController: [[SnapChatAppRouter shared] routeToHomeNavigationViewController] animated:YES completion:NULL];
 }
 
 @end
+
+

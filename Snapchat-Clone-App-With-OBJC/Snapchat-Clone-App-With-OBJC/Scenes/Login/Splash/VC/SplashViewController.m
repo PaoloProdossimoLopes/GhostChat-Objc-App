@@ -6,6 +6,7 @@
 //
 
 #import "SplashViewController.h"
+#import "SnapChatAppRouter.h"
 
 //MARK: - Interface
 
@@ -13,6 +14,8 @@
 
 @property (strong, nonatomic) IBOutlet UIButton * singUpButton;
 @property (strong, nonatomic) IBOutlet UIButton * signinButton;
+
+@property (strong, nonatomic) SnapChatAppRouter *router;
 
 @end
 
@@ -24,6 +27,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    self.router = [SnapChatAppRouter shared];
     [self configureButton];
 }
 
@@ -37,17 +42,13 @@
 #pragma mark - Selectors
 
 - (IBAction)signUpButtonHandleTapped: (id)sender {
-    UIStoryboard *sb = [UIStoryboard storyboardWithName:@"SignUp" bundle:nil];
-    
-    UIViewController *vc = [sb instantiateViewControllerWithIdentifier:@"SignUpViewController"];
-    [[self navigationController] pushViewController:vc animated:YES];
+    [[self navigationController]
+     pushViewController:[self.router routeToSignUpView] animated:YES];
 }
 
 - (IBAction)signInButtonHandleTapped: (id)sender {
-    
-    UIStoryboard * sb = [UIStoryboard storyboardWithName: @"SignIn" bundle:NULL];
-    UIViewController * vc = [sb instantiateViewControllerWithIdentifier: @"SignInViewController"];
-    [[self navigationController] pushViewController:vc animated:YES];
+    [[self navigationController]
+     pushViewController: [self.router routeToSignInView] animated:YES];
 }
 
 @end

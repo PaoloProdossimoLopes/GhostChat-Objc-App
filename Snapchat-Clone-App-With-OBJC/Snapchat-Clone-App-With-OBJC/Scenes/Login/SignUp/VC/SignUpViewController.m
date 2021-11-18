@@ -7,8 +7,13 @@
 
 #import "SignUpViewController.h"
 #import "HomeTableViewController.h"
+#import "UIViewController+AlertExtension.h"
+#import "SnapChatAppRouter.h"
+#import "SignUpViewModel.h"
 
 @interface SignUpViewController()
+
+@property (strong, nonatomic) SnapChatAppRouter *router;
 
 //MARK: TextField
 @property (strong, nonatomic) IBOutlet UITextField * nameTextField;
@@ -46,7 +51,7 @@
                     self.passwordTextField.text.length);
     
     if (isValid) { [self submitYourInformations]; }
-    else { [self showAlert]; }
+    else { [self showCustomAlertDefault]; }
     
 }
 
@@ -66,21 +71,23 @@
 
 - (void)registerNewAccountInFirebase: (NSDictionary*)dict {
     
-    [[FIRAuth auth] createUserWithEmail: dict[@"email"]
-                               password: dict[@"password"]
-                             completion:^(FIRAuthDataResult * _Nullable authResult,
-                                          NSError * _Nullable error) {
-        
-        if (error == nil) { [self saveOnDataBase: authResult.user userInfo: dict]; }
-        else { [self showAlert]; }
-        
+    [self.viewModel registerNewAccountInFirebase: dict successCompletion:^(FIRAuthDataResult * _Nullable authResult){
+            [self saveOnDataBase: authResult.user userInfo: dict];
+        } failureCompletion:^(NSError * _Nonnull error) {
+            [self showCustomAlertDefault];
+        }];
+    
+    [self.viewModel
+     registerNewAccountInFirebase: dict
+     successCompletion:^(FIRAuthDataResult * _Nonnull authResult) {
+        [self saveOnDataBase: authResult.user userInfo: dict];
+    } failureCompletion:^(NSError * _Nonnull error) {
+        [self showCustomAlertDefault];
     }];
+    
 }
 
 - (void)saveOnDataBase: (FIRUser*)user userInfo: (NSDictionary<NSString*,id>*)userInfo {
-    
-    FIRDatabaseReference* database = [[FIRDatabase database] reference];
-    FIRDatabaseReference* userReference = [[database child: @"user"] child: user.uid];
     
     NSDictionary * userInformation = [[NSDictionary alloc] init];
     userInformation = @{@"uid": user.uid,
@@ -88,36 +95,17 @@
                         @"email": self.emailTextField.text,
                         @"password": self.passwordTextField.text};
     
-    [userReference setValue: userInformation withCompletionBlock:^(NSError * _Nullable error, FIRDatabaseReference * _Nonnull ref) {
-        if (error == nil) {
-            [self navigateToHomeView];
-        } else {
-            [self showAlert];
-        }
+    [self.viewModel saveOnDataBase:user userInformation: userInformation
+     successCompletion:^{
+        [self navigateToHomeView];
+    } failureCompletion:^(NSError * _Nonnull error) {
+        [self showCustomAlertDefault];
     }];
     
 }
 
 - (void)navigateToHomeView {
-        UIViewController* vc = [[HomeTableViewController alloc] init];
-        UINavigationController* nav = [[UINavigationController alloc] initWithRootViewController:vc];
-        nav.modalPresentationStyle = UIModalPresentationFullScreen;
-        [self presentViewController:nav animated:YES completion:NULL];
-}
-
-- (void)showAlert {
-    UIAlertController * alert = [UIAlertController
-                                 alertControllerWithTitle: @"Ops"
-                                 message: @"Plese make sure all fields are filled out"
-                                 preferredStyle: UIAlertControllerStyleAlert];
-    
-    UIAlertAction * action = [UIAlertAction
-                              actionWithTitle: @"OK"
-                              style: UIAlertActionStyleDefault
-                              handler:nil];
-    
-    [alert addAction: action];
-    [self presentViewController:alert animated:YES completion:NULL];
+        [self presentViewController:[[SnapChatAppRouter shared] routeToHomeNavigationViewController] animated:YES completion:NULL];
 }
 
 @end

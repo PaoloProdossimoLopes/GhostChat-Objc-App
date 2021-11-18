@@ -6,6 +6,7 @@
 //
 
 #import "HomeTableViewController.h"
+#import "SnapChatAppRouter.h"
 
 @import Firebase;
 
@@ -102,12 +103,11 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     [tableView deselectRowAtIndexPath: indexPath animated:YES];
     
-    MessageViewController *vc = [[MessageViewController alloc] init];
-    
-    vc.messageArray = self.viewModel.messagesArray[indexPath.row];
-    vc.keys = self.viewModel.keys[indexPath.row];
-    
-    [[self navigationController] pushViewController:vc animated:YES];
+    UIViewController *vc = [[SnapChatAppRouter shared]
+                            routeToMessageView:self.viewModel.messagesArray[indexPath.row]
+                            key: self.viewModel.keys[indexPath.row]];
+    [[self navigationController] pushViewController:vc
+                                           animated:YES];
 }
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {

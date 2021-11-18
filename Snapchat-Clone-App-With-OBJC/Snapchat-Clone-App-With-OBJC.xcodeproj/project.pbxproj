@@ -27,6 +27,8 @@
 		B163BDFC274487D300C985B7 /* VerifySession.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B163BDFB274487D300C985B7 /* VerifySession.storyboard */; };
 		B163BE002745053100C985B7 /* HomeTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B163BDFF2745053100C985B7 /* HomeTableViewController.m */; };
 		B163BE0427451A5F00C985B7 /* AddViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B163BE0327451A5F00C985B7 /* AddViewController.m */; };
+		B184476F2746C372005689D7 /* UIViewController+AlertExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = B184476E2746C372005689D7 /* UIViewController+AlertExtension.m */; };
+		B18447722746C78B005689D7 /* SignUpViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = B18447712746C78B005689D7 /* SignUpViewModel.m */; };
 		B19BD535274576F4000E13CE /* ListOfContatcsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B19BD534274576F4000E13CE /* ListOfContatcsTableViewController.m */; };
 		B19BD5382745C395000E13CE /* MessageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B19BD5372745C395000E13CE /* MessageViewController.m */; };
 		B19BD55E274653F4000E13CE /* AddViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = B19BD55D274653F4000E13CE /* AddViewModel.m */; };
@@ -35,6 +37,7 @@
 		B1D5D2CC27466A33003BA54D /* VerifySessionViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = B1D5D2CB27466A33003BA54D /* VerifySessionViewModel.m */; };
 		B1D5D2D027466C8E003BA54D /* SnapChatAppRouter.m in Sources */ = {isa = PBXBuildFile; fileRef = B1D5D2CF27466C8E003BA54D /* SnapChatAppRouter.m */; };
 		B1D5D2D6274672BB003BA54D /* MessageViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = B1D5D2D5274672BB003BA54D /* MessageViewModel.m */; };
+		B1D5D2DA2746BF3F003BA54D /* SignInViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = B1D5D2D92746BF3F003BA54D /* SignInViewModel.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -87,6 +90,10 @@
 		B163BDFF2745053100C985B7 /* HomeTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HomeTableViewController.m; sourceTree = "<group>"; };
 		B163BE0227451A5F00C985B7 /* AddViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AddViewController.h; sourceTree = "<group>"; };
 		B163BE0327451A5F00C985B7 /* AddViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AddViewController.m; sourceTree = "<group>"; };
+		B184476D2746C372005689D7 /* UIViewController+AlertExtension.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIViewController+AlertExtension.h"; sourceTree = "<group>"; };
+		B184476E2746C372005689D7 /* UIViewController+AlertExtension.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+AlertExtension.m"; sourceTree = "<group>"; };
+		B18447702746C78B005689D7 /* SignUpViewModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SignUpViewModel.h; sourceTree = "<group>"; };
+		B18447712746C78B005689D7 /* SignUpViewModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SignUpViewModel.m; sourceTree = "<group>"; };
 		B19BD533274576F4000E13CE /* ListOfContatcsTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ListOfContatcsTableViewController.h; sourceTree = "<group>"; };
 		B19BD534274576F4000E13CE /* ListOfContatcsTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ListOfContatcsTableViewController.m; sourceTree = "<group>"; };
 		B19BD5362745C395000E13CE /* MessageViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MessageViewController.h; sourceTree = "<group>"; };
@@ -104,6 +111,8 @@
 		B1D5D2D227466F03003BA54D /* SnapChatAppRouter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SnapChatAppRouter.h; sourceTree = "<group>"; };
 		B1D5D2D4274672BB003BA54D /* MessageViewModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MessageViewModel.h; sourceTree = "<group>"; };
 		B1D5D2D5274672BB003BA54D /* MessageViewModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MessageViewModel.m; sourceTree = "<group>"; };
+		B1D5D2D82746BF3F003BA54D /* SignInViewModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SignInViewModel.h; sourceTree = "<group>"; };
+		B1D5D2D92746BF3F003BA54D /* SignInViewModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SignInViewModel.m; sourceTree = "<group>"; };
 		DB1E26CD18517AC6A30B1661 /* Pods_Snapchat_Clone_App_With_OBJC.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Snapchat_Clone_App_With_OBJC.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F73761AFFD6EC61BD0D0E9ED /* Pods-Snapchat-Clone-App-With-OBJC.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Snapchat-Clone-App-With-OBJC.debug.xcconfig"; path = "Target Support Files/Pods-Snapchat-Clone-App-With-OBJC/Pods-Snapchat-Clone-App-With-OBJC.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -239,8 +248,6 @@
 		B163BDDA27442C5C00C985B7 /* Splash */ = {
 			isa = PBXGroup;
 			children = (
-				B19BD5502745DF64000E13CE /* ViewModel */,
-				B19BD54F2745DF5F000E13CE /* Model */,
 				B19BD5402745DE5E000E13CE /* StoryBoard */,
 				B19BD53F2745DE55000E13CE /* VC */,
 			);
@@ -250,6 +257,7 @@
 		B163BDE42744317600C985B7 /* SignUp */ = {
 			isa = PBXGroup;
 			children = (
+				B1D5D2DB2746C244003BA54D /* ViewModel */,
 				B19BD5442745DE8F000E13CE /* StoryBoard */,
 				B19BD5432745DE87000E13CE /* VC */,
 			);
@@ -259,6 +267,7 @@
 		B163BDE52744318200C985B7 /* SignIn */ = {
 			isa = PBXGroup;
 			children = (
+				B1D5D2D72746BF26003BA54D /* ViewModel */,
 				B19BD5422745DE75000E13CE /* StoryBoard */,
 				B19BD5412745DE6B000E13CE /* VC */,
 			);
@@ -425,23 +434,10 @@
 			path = StoryBoard;
 			sourceTree = "<group>";
 		};
-		B19BD54F2745DF5F000E13CE /* Model */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Model;
-			sourceTree = "<group>";
-		};
-		B19BD5502745DF64000E13CE /* ViewModel */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = ViewModel;
-			sourceTree = "<group>";
-		};
 		B19BD5552745DF83000E13CE /* Commons */ = {
 			isa = PBXGroup;
 			children = (
+				B1D5D2DC2746C2F7003BA54D /* Extensions+Class */,
 				B1D5D2CD27466C61003BA54D /* Router */,
 				B19BD5582745DFA4000E13CE /* Protocols */,
 			);
@@ -517,6 +513,41 @@
 				B1D5D2D5274672BB003BA54D /* MessageViewModel.m */,
 			);
 			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		B1D5D2D72746BF26003BA54D /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				B1D5D2D82746BF3F003BA54D /* SignInViewModel.h */,
+				B1D5D2D92746BF3F003BA54D /* SignInViewModel.m */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		B1D5D2DB2746C244003BA54D /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				B18447702746C78B005689D7 /* SignUpViewModel.h */,
+				B18447712746C78B005689D7 /* SignUpViewModel.m */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		B1D5D2DC2746C2F7003BA54D /* Extensions+Class */ = {
+			isa = PBXGroup;
+			children = (
+				B1D5D2DD2746C303003BA54D /* UIViewController */,
+			);
+			path = "Extensions+Class";
+			sourceTree = "<group>";
+		};
+		B1D5D2DD2746C303003BA54D /* UIViewController */ = {
+			isa = PBXGroup;
+			children = (
+				B184476D2746C372005689D7 /* UIViewController+AlertExtension.h */,
+				B184476E2746C372005689D7 /* UIViewController+AlertExtension.m */,
+			);
+			path = UIViewController;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -708,8 +739,11 @@
 				B163BE002745053100C985B7 /* HomeTableViewController.m in Sources */,
 				B19BD55E274653F4000E13CE /* AddViewModel.m in Sources */,
 				B1D5D2D6274672BB003BA54D /* MessageViewModel.m in Sources */,
+				B18447722746C78B005689D7 /* SignUpViewModel.m in Sources */,
 				B19BD56727466307000E13CE /* ListOfContatctsViewModel.m in Sources */,
+				B184476F2746C372005689D7 /* UIViewController+AlertExtension.m in Sources */,
 				B163BDB42744266D00C985B7 /* main.m in Sources */,
+				B1D5D2DA2746BF3F003BA54D /* SignInViewModel.m in Sources */,
 				B163BDA62744266A00C985B7 /* SceneDelegate.m in Sources */,
 				B19BD535274576F4000E13CE /* ListOfContatcsTableViewController.m in Sources */,
 				B19BD56327465DA7000E13CE /* HomeViewModel.m in Sources */,

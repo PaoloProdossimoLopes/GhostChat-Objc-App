@@ -9,10 +9,12 @@
 #import <FirebaseAuth/FirebaseAuth.h>
 #import <FirebaseDatabase/FirebaseDatabase.h>
 
+#import "SignUpViewModel.h"
+
 NS_ASSUME_NONNULL_BEGIN
 
 @interface SignUpViewController : UIViewController
-
+@property (strong, nonatomic) SignUpViewModel *viewModel;
 @end
 
 NS_ASSUME_NONNULL_END
