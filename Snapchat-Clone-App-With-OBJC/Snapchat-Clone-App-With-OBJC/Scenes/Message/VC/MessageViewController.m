@@ -92,18 +92,10 @@
 - (void)getImageFromFirebaseStorage {
     [self.loaderIndicator startAnimating];
     
-    FIRStorageReference *ref = [[FIRStorage storage] reference];
-    NSString *imagePath = [NSString stringWithFormat: @"/images/%@", self.keys];
-    FIRStorageReference *imageRef = [ref child: imagePath];
-    [imageRef dataWithMaxSize:(5 * 1024 * 1024) completion:^(NSData * _Nullable data, NSError * _Nullable error) {
-            if (error == nil && data != nil) {
-                self.imageMessageView.image = [[UIImage alloc]initWithData: data];
-            } else {
-                NSLog(@"DEBUG: Error %@", error.localizedDescription);
-                self.imageMessageView.image = [[UIImage alloc] init];
-                
-            }
-        [self.loaderIndicator stopAnimating];
+    [self.viewModel getImageFromFirebaseStorage:self.keys messageArray:self.messageArray sucsessCompletion:^(UIImage *image) {
+        self.imageMessageView.image = image;
+    } failureCompletion:^{
+        self.imageMessageView.image = [UIImage imageNamed:@"addPhotoPlaceholder"];
     }];
 }
 

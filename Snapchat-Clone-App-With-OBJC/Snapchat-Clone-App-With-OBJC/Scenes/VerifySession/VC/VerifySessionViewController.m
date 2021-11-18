@@ -50,7 +50,6 @@
 
 - (void)routeToSplashView {
     [self presentViewController:[self.router routeToSplashView] animated:YES completion:NULL];
-    
 }
 
 @end
