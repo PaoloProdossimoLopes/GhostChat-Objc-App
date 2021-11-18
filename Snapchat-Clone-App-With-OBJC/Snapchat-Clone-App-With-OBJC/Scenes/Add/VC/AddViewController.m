@@ -6,8 +6,6 @@
 //
 
 #import "AddViewController.h"
-#import <FirebaseDatabase/FirebaseDatabase.h>
-@import Firebase;
 
 #pragma mark - Constants
 
