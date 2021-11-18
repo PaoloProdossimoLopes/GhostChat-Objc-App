@@ -1,0 +1,6 @@
+framework module Pods_Snapchat_Clone_App_With_OBJC {
+  umbrella header "Pods-Snapchat-Clone-App-With-OBJC-umbrella.h"
+
+  export *
+  module * { export * }
+}

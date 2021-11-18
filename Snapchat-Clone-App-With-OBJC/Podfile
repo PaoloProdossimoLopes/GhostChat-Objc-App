@@ -1,0 +1,22 @@
+# Uncomment the next line to define a global platform for your project
+#platform :ios, '9.0'
+
+#MARK: - Firebase dependencies
+
+def firebase_dependencies
+  pod 'Firebase'
+  pod 'FirebaseAuth'
+  pod 'FirebaseDatabase'
+  pod 'FirebaseStorage'
+  pod 'FirebaseAnalytics'
+end
+
+#MARK: - App target
+
+target 'Snapchat-Clone-App-With-OBJC' do
+  use_frameworks!
+  firebase_dependencies
+end
+
+
+
