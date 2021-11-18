@@ -13,11 +13,12 @@
 #import "ListOfContatcsTableViewController.h"
 #import "MessageViewController.h"
 #import "CustomViewControllersProtocol.h"
+#import "HomeViewModel.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
 @interface HomeTableViewController : UITableViewController <CustomViewControllersProtocol>
-    
+    @property (strong, nonatomic) HomeViewModel *viewModel;
 @end
 
 

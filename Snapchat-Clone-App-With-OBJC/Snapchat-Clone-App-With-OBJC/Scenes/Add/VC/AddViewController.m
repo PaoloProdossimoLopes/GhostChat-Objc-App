@@ -127,20 +127,12 @@ CGFloat imageViewSize = 300;
 #pragma mark - Selectors
 
 - (void)adddButtonHandleTapped {
-    NSLog(@"Add button handle tapped");
-    
     UIImagePickerController* picker = [[UIImagePickerController alloc]init];
     picker.delegate = self;
     [self presentViewController: picker animated:YES completion: NULL];
-    
-}
-
-- (void)addNoteButtonAndleTapped {
-    NSLog(@"Add note button handle tapped");
 }
 
 - (void)sendAMessageButtonAndleTapped {
-    NSLog(@"send a message button handle tapped");
     [self saveMessageToFirebase];
 }
 
@@ -148,52 +140,12 @@ CGFloat imageViewSize = 300;
 
 - (void)saveMessageToFirebase {
     
-    if (self.addNote.text.length <= 0 ) { return; }
-    
-    FIRUser * user = [FIRAuth auth].currentUser;
-    FIRDatabaseReference * databaseRef = [[FIRDatabase database] reference];
-    FIRDatabaseReference * reff = [databaseRef child:@"messages"];
-    NSString * key = [reff childByAutoId].key;
-    
-    
-    [self uploadImageToFirebase:key];
-    
-    NSMutableDictionary * message = [[NSMutableDictionary alloc] init];
-    
-    [message setValue:user.uid forKey:@"sender"];
-    [message setValue:self.username forKey:@"recipient"];
-    [message setValue:self.addNote.text forKey:@"messageText"]; // add textfield here
-    
-    NSString* stringPath = [NSString stringWithFormat:@"/%@/", user.uid];
-    
-    NSDictionary *childUpdates = @{[stringPath stringByAppendingString:key]: message};
-    
-    [reff updateChildValues: childUpdates];
-    
-    [[self navigationController] popToRootViewControllerAnimated:YES];
+    [self.viewModel saveDataOnFirebase:self.addNote.text username:self.username imagePlaceHoler:self.imageViewPlaceholder.image callBack:^{
+            self.imageViewPlaceholder.image = self.viewModel.imagePlaceholder;
+            [[self navigationController] popToRootViewControllerAnimated:YES];
+    }];
 }
 
-- (void)uploadImageToFirebase: (NSString*)key {
-    FIRStorageReference * storageRef = [[FIRStorage storage] reference];
-    NSString *imagePath = [NSString stringWithFormat:@"/images/%@", key];
-    
-    FIRStorageReference *imageRef = [storageRef child: imagePath];
-    
-    NSData *imageData = UIImageJPEGRepresentation(self.imageViewPlaceholder.image, 0.5);
-    
-    FIRStorageMetadata *metaData = [FIRStorageMetadata new];
-    metaData.contentType = @"image/jpeg";
-    
-    [imageRef putData: imageData metadata: metaData completion:^(FIRStorageMetadata * _Nullable metadata, NSError * _Nullable error) {
-        if (error != nil) {
-            NSLog(@"DEBUG: Error %@", error.localizedDescription);
-            self.imageViewPlaceholder.image = [UIImage imageNamed:@"addPhotoPlaceholder"];
-        } else {
-            NSLog(@"DEBUG: Success");
-        }
-    }];
-    
-}
 
 #pragma mark - UIPickerViewDelegate
 

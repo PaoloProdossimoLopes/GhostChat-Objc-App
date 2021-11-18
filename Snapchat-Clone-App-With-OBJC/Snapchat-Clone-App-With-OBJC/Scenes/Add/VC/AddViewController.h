@@ -13,9 +13,12 @@
 
 #import "CustomViewControllersProtocol.h"
 
+#import "AddViewModel.h"
+
 NS_ASSUME_NONNULL_BEGIN
 
 @interface AddViewController : UIViewController <CustomViewControllersProtocol, UINavigationControllerDelegate,  UIImagePickerControllerDelegate>
+    @property (strong, nonatomic) AddViewModel *viewModel;
     @property (strong, nonatomic) NSString* username;
 @end
 

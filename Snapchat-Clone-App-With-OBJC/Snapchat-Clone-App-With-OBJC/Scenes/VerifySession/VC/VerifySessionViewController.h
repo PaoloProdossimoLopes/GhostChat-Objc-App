@@ -10,6 +10,7 @@
 
 #import "SplashViewController.h"
 #import "HomeTableViewController.h"
+#import "HomeViewModel.h"
 
 NS_ASSUME_NONNULL_BEGIN
 

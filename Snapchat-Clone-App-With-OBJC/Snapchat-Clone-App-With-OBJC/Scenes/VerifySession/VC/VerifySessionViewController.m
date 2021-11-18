@@ -37,7 +37,11 @@
 }
 
 - (void)routeToHome {
-    UIViewController * vc = [[HomeTableViewController alloc] init];
+    HomeTableViewController * vc = [[HomeTableViewController alloc] init];
+    HomeViewModel *viewModel = [[HomeViewModel alloc] init];
+    
+    vc.viewModel = viewModel;
+    
     UINavigationController * nav = [[UINavigationController alloc]
                                     initWithRootViewController:vc];
     

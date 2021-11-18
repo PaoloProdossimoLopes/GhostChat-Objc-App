@@ -29,6 +29,8 @@
 		B163BE0427451A5F00C985B7 /* AddViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B163BE0327451A5F00C985B7 /* AddViewController.m */; };
 		B19BD535274576F4000E13CE /* ListOfContatcsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B19BD534274576F4000E13CE /* ListOfContatcsTableViewController.m */; };
 		B19BD5382745C395000E13CE /* MessageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B19BD5372745C395000E13CE /* MessageViewController.m */; };
+		B19BD55E274653F4000E13CE /* AddViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = B19BD55D274653F4000E13CE /* AddViewModel.m */; };
+		B19BD56327465DA7000E13CE /* HomeViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = B19BD56227465DA6000E13CE /* HomeViewModel.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -86,6 +88,10 @@
 		B19BD5362745C395000E13CE /* MessageViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MessageViewController.h; sourceTree = "<group>"; };
 		B19BD5372745C395000E13CE /* MessageViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MessageViewController.m; sourceTree = "<group>"; };
 		B19BD55A2745EE04000E13CE /* CustomViewControllersProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CustomViewControllersProtocol.h; sourceTree = "<group>"; };
+		B19BD55C274653F4000E13CE /* AddViewModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AddViewModel.h; sourceTree = "<group>"; };
+		B19BD55D274653F4000E13CE /* AddViewModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AddViewModel.m; sourceTree = "<group>"; };
+		B19BD56127465DA6000E13CE /* HomeViewModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HomeViewModel.h; sourceTree = "<group>"; };
+		B19BD56227465DA6000E13CE /* HomeViewModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HomeViewModel.m; sourceTree = "<group>"; };
 		DB1E26CD18517AC6A30B1661 /* Pods_Snapchat_Clone_App_With_OBJC.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Snapchat_Clone_App_With_OBJC.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F73761AFFD6EC61BD0D0E9ED /* Pods-Snapchat-Clone-App-With-OBJC.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Snapchat-Clone-App-With-OBJC.debug.xcconfig"; path = "Target Support Files/Pods-Snapchat-Clone-App-With-OBJC/Pods-Snapchat-Clone-App-With-OBJC.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -259,6 +265,7 @@
 		B163BDFD2745050F00C985B7 /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				B19BD55F27465D7C000E13CE /* ViewModel */,
 				B19BD53A2745DE13000E13CE /* VC */,
 			);
 			path = Home;
@@ -267,6 +274,7 @@
 		B163BE0127451A1000C985B7 /* Add */ = {
 			isa = PBXGroup;
 			children = (
+				B19BD55B274653C2000E13CE /* ViewModel */,
 				B19BD5392745DE03000E13CE /* VC */,
 			);
 			path = Add;
@@ -430,6 +438,24 @@
 				B19BD55A2745EE04000E13CE /* CustomViewControllersProtocol.h */,
 			);
 			path = Protocols;
+			sourceTree = "<group>";
+		};
+		B19BD55B274653C2000E13CE /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				B19BD55C274653F4000E13CE /* AddViewModel.h */,
+				B19BD55D274653F4000E13CE /* AddViewModel.m */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		B19BD55F27465D7C000E13CE /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				B19BD56127465DA6000E13CE /* HomeViewModel.h */,
+				B19BD56227465DA6000E13CE /* HomeViewModel.m */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 		B1B7DEA8BFA7BDF8991ED97B /* Pods */ = {
@@ -626,9 +652,11 @@
 				B163BDEC2744323100C985B7 /* SignUpViewController.m in Sources */,
 				B163BDFA274485EA00C985B7 /* VerifySessionViewController.m in Sources */,
 				B163BE002745053100C985B7 /* HomeTableViewController.m in Sources */,
+				B19BD55E274653F4000E13CE /* AddViewModel.m in Sources */,
 				B163BDB42744266D00C985B7 /* main.m in Sources */,
 				B163BDA62744266A00C985B7 /* SceneDelegate.m in Sources */,
 				B19BD535274576F4000E13CE /* ListOfContatcsTableViewController.m in Sources */,
+				B19BD56327465DA7000E13CE /* HomeViewModel.m in Sources */,
 				B163BDE027442CA200C985B7 /* SplashViewController.m in Sources */,
 				B163BE0427451A5F00C985B7 /* AddViewController.m in Sources */,
 			);

@@ -6,6 +6,7 @@
 //
 
 #import "ListOfContatcsTableViewController.h"
+#import "AddViewModel.h"
 
 @interface ListOfContatcsTableViewController ()
     @property (strong, nonatomic) NSMutableArray *recepientsArray;
@@ -23,7 +24,12 @@
 #pragma mark - Helpers
 
 - (AddViewController*)routeToAddNew {
+    
     AddViewController * vc = [[AddViewController alloc] init];
+    AddViewModel *viewModel = [[AddViewModel alloc] init];
+    
+    vc.viewModel = viewModel;
+    
     return vc;
 }
 
