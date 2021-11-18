@@ -22,7 +22,12 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
+    [self configureUI];
+}
+
+#pragma mark - Helpers
+
+- (void)configureUI {
     self.loginButton.layer.cornerRadius = self.loginButton.frame.size.height/2;
     self.navigationController.navigationBar.tintColor = UIColor.orangeColor;
 }
@@ -45,13 +50,8 @@
                            password: self.passwordTextField.text
                          completion:^(FIRAuthDataResult * _Nullable authResult, NSError * _Nullable error) {
         
-        if (error == nil) {
-            NSLog(@"DEBUG: Go to Home");
-            [self goToHomeView];
-        } else {
-            NSLog(@"DEBUG: Nao tem cadastro ainda");
-            [self showError];
-        }
+        if (error == nil) { [self goToHomeView]; }
+        else { [self showError]; }
     }];
     
 }
@@ -63,8 +63,6 @@
     nav.modalPresentationStyle = UIModalPresentationFullScreen;
     
     [self presentViewController:nav animated:YES completion:NULL];
-    
-    NSLog(@"Loggin sucess!");
 }
 
 - (void)showError {

@@ -16,8 +16,7 @@
 
 @end
 
-
-//MARK: - Implementation
+#pragma mark - Implementation
 
 @implementation SplashViewController
 
@@ -25,7 +24,12 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
+    [self configureButton];
+}
+
+#pragma mark - Helpers
+
+- (void)configureButton {
     self.singUpButton.layer.cornerRadius = self.singUpButton.frame.size.height/2;
     self.signinButton.layer.cornerRadius = self.signinButton.frame.size.height/2;
 }
@@ -37,8 +41,6 @@
     
     UIViewController *vc = [sb instantiateViewControllerWithIdentifier:@"SignUpViewController"];
     [[self navigationController] pushViewController:vc animated:YES];
-    
-    NSLog(@"DEBUG: SingUpButton was Tappped");
 }
 
 - (IBAction)signInButtonHandleTapped: (id)sender {
@@ -46,8 +48,6 @@
     UIStoryboard * sb = [UIStoryboard storyboardWithName: @"SignIn" bundle:NULL];
     UIViewController * vc = [sb instantiateViewControllerWithIdentifier: @"SignInViewController"];
     [[self navigationController] pushViewController:vc animated:YES];
-    
-    NSLog(@"DEBUG: SingIpButton was Tappped");
 }
 
 @end

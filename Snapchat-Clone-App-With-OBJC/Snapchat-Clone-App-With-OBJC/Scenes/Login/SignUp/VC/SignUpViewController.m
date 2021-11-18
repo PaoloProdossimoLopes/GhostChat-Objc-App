@@ -22,15 +22,21 @@
 
 @implementation SignUpViewController
 
-//MARK: - Lifecycle
+# pragma mark - Lifecycle
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    [self configureUI];
+}
+
+# pragma mark - Helpers
+
+- (void)configureUI {
     self.registerButton.layer.cornerRadius = self.registerButton.frame.size.height/2;
     self.navigationController.navigationBar.tintColor = UIColor.orangeColor;
 }
 
-//MARK: - IBActions
+# pragma mark - IBActions
 
 - (IBAction)registerButtonHandleTapped: (id)sender {
     NSLog(@"Register button was tapped");
@@ -44,7 +50,7 @@
     
 }
 
-//MARK: - Helpers
+# pragma mark - Helpers
 
 - (void)submitYourInformations {
     NSDictionary * signUpParameters = [[NSDictionary alloc] init];
