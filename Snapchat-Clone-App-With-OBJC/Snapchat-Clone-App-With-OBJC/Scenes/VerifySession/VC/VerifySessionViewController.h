@@ -12,6 +12,8 @@
 #import "HomeTableViewController.h"
 #import "HomeViewModel.h"
 
+#import "VerifySessionViewModel.h"
+
 NS_ASSUME_NONNULL_BEGIN
 
 @interface VerifySessionViewController : UIViewController

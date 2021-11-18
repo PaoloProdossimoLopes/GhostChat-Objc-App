@@ -32,6 +32,8 @@
 		B19BD55E274653F4000E13CE /* AddViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = B19BD55D274653F4000E13CE /* AddViewModel.m */; };
 		B19BD56327465DA7000E13CE /* HomeViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = B19BD56227465DA6000E13CE /* HomeViewModel.m */; };
 		B19BD56727466307000E13CE /* ListOfContatctsViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = B19BD56627466307000E13CE /* ListOfContatctsViewModel.m */; };
+		B1D5D2CC27466A33003BA54D /* VerifySessionViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = B1D5D2CB27466A33003BA54D /* VerifySessionViewModel.m */; };
+		B1D5D2D027466C8E003BA54D /* SnapChatAppRouter.m in Sources */ = {isa = PBXBuildFile; fileRef = B1D5D2CF27466C8E003BA54D /* SnapChatAppRouter.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -95,6 +97,10 @@
 		B19BD56227465DA6000E13CE /* HomeViewModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HomeViewModel.m; sourceTree = "<group>"; };
 		B19BD56527466307000E13CE /* ListOfContatctsViewModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ListOfContatctsViewModel.h; sourceTree = "<group>"; };
 		B19BD56627466307000E13CE /* ListOfContatctsViewModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ListOfContatctsViewModel.m; sourceTree = "<group>"; };
+		B1D5D2CA27466A33003BA54D /* VerifySessionViewModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VerifySessionViewModel.h; sourceTree = "<group>"; };
+		B1D5D2CB27466A33003BA54D /* VerifySessionViewModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VerifySessionViewModel.m; sourceTree = "<group>"; };
+		B1D5D2CF27466C8E003BA54D /* SnapChatAppRouter.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SnapChatAppRouter.m; sourceTree = "<group>"; };
+		B1D5D2D227466F03003BA54D /* SnapChatAppRouter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SnapChatAppRouter.h; sourceTree = "<group>"; };
 		DB1E26CD18517AC6A30B1661 /* Pods_Snapchat_Clone_App_With_OBJC.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Snapchat_Clone_App_With_OBJC.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F73761AFFD6EC61BD0D0E9ED /* Pods-Snapchat-Clone-App-With-OBJC.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Snapchat-Clone-App-With-OBJC.debug.xcconfig"; path = "Target Support Files/Pods-Snapchat-Clone-App-With-OBJC/Pods-Snapchat-Clone-App-With-OBJC.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -259,6 +265,7 @@
 		B163BDF7274485D100C985B7 /* VerifySession */ = {
 			isa = PBXGroup;
 			children = (
+				B19BD568274669F8000E13CE /* ViewModel */,
 				B19BD53E2745DE46000E13CE /* StoryBoard */,
 				B19BD53D2745DE3F000E13CE /* VC */,
 			);
@@ -431,6 +438,7 @@
 		B19BD5552745DF83000E13CE /* Commons */ = {
 			isa = PBXGroup;
 			children = (
+				B1D5D2CD27466C61003BA54D /* Router */,
 				B19BD5582745DFA4000E13CE /* Protocols */,
 			);
 			path = Commons;
@@ -471,6 +479,15 @@
 			path = ViewModel;
 			sourceTree = "<group>";
 		};
+		B19BD568274669F8000E13CE /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				B1D5D2CA27466A33003BA54D /* VerifySessionViewModel.h */,
+				B1D5D2CB27466A33003BA54D /* VerifySessionViewModel.m */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
 		B1B7DEA8BFA7BDF8991ED97B /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -478,6 +495,15 @@
 				6B4C478A563537308E52E296 /* Pods-Snapchat-Clone-App-With-OBJC.release.xcconfig */,
 			);
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		B1D5D2CD27466C61003BA54D /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				B1D5D2CF27466C8E003BA54D /* SnapChatAppRouter.m */,
+				B1D5D2D227466F03003BA54D /* SnapChatAppRouter.h */,
+			);
+			path = Router;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -661,6 +687,8 @@
 			files = (
 				B163BDE9274431EC00C985B7 /* SignInViewController.m in Sources */,
 				B19BD5382745C395000E13CE /* MessageViewController.m in Sources */,
+				B1D5D2D027466C8E003BA54D /* SnapChatAppRouter.m in Sources */,
+				B1D5D2CC27466A33003BA54D /* VerifySessionViewModel.m in Sources */,
 				B163BDA32744266A00C985B7 /* AppDelegate.m in Sources */,
 				B163BDEC2744323100C985B7 /* SignUpViewController.m in Sources */,
 				B163BDFA274485EA00C985B7 /* VerifySessionViewController.m in Sources */,
