@@ -259,8 +259,6 @@
 		B163BDFD2745050F00C985B7 /* Home */ = {
 			isa = PBXGroup;
 			children = (
-				B19BD5482745DF30000E13CE /* ViewModel */,
-				B19BD5472745DF27000E13CE /* Model */,
 				B19BD53A2745DE13000E13CE /* VC */,
 			);
 			path = Home;
@@ -269,8 +267,6 @@
 		B163BE0127451A1000C985B7 /* Add */ = {
 			isa = PBXGroup;
 			children = (
-				B19BD5462745DF1E000E13CE /* Model */,
-				B19BD5452745DF19000E13CE /* ViewModel */,
 				B19BD5392745DE03000E13CE /* VC */,
 			);
 			path = Add;
@@ -297,8 +293,6 @@
 		B19BD532274576B9000E13CE /* ListOfContatcs */ = {
 			isa = PBXGroup;
 			children = (
-				B19BD54A2745DF3C000E13CE /* ViewModel */,
-				B19BD5492745DF38000E13CE /* Model */,
 				B19BD53B2745DE1B000E13CE /* VC */,
 			);
 			path = ListOfContatcs;
@@ -406,48 +400,6 @@
 				B163BDED2744327900C985B7 /* SignUp.storyboard */,
 			);
 			path = StoryBoard;
-			sourceTree = "<group>";
-		};
-		B19BD5452745DF19000E13CE /* ViewModel */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = ViewModel;
-			sourceTree = "<group>";
-		};
-		B19BD5462745DF1E000E13CE /* Model */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Model;
-			sourceTree = "<group>";
-		};
-		B19BD5472745DF27000E13CE /* Model */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Model;
-			sourceTree = "<group>";
-		};
-		B19BD5482745DF30000E13CE /* ViewModel */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = ViewModel;
-			sourceTree = "<group>";
-		};
-		B19BD5492745DF38000E13CE /* Model */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Model;
-			sourceTree = "<group>";
-		};
-		B19BD54A2745DF3C000E13CE /* ViewModel */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = ViewModel;
 			sourceTree = "<group>";
 		};
 		B19BD54F2745DF5F000E13CE /* Model */ = {
