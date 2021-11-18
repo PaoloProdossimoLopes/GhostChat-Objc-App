@@ -49,7 +49,6 @@
         view.translatesAutoresizingMaskIntoConstraints = false;
         [self.view addSubview: view];
     }
-    
 }
 
 - (void)configureConstraints {
@@ -92,10 +91,12 @@
 - (void)getImageFromFirebaseStorage {
     [self.loaderIndicator startAnimating];
     
-    [self.viewModel getImageFromFirebaseStorage:self.keys messageArray:self.messageArray sucsessCompletion:^(UIImage *image) {
+    [self.viewModel getImageFromFirebaseStorage: self.keys messageArray: self.messageArray sucsessCompletion:^(UIImage *image) {
         self.imageMessageView.image = image;
+        [self.loaderIndicator stopAnimating];
     } failureCompletion:^{
-        self.imageMessageView.image = [UIImage imageNamed:@"addPhotoPlaceholder"];
+        self.imageMessageView.image = [UIImage imageNamed: @"addPhotoPlaceholder"];
+        [self.loaderIndicator stopAnimating];
     }];
 }
 
