@@ -232,8 +232,6 @@
 		B163BDE42744317600C985B7 /* SignUp */ = {
 			isa = PBXGroup;
 			children = (
-				B19BD5542745DF78000E13CE /* ViewModel */,
-				B19BD5532745DF75000E13CE /* Model */,
 				B19BD5442745DE8F000E13CE /* StoryBoard */,
 				B19BD5432745DE87000E13CE /* VC */,
 			);
@@ -243,8 +241,6 @@
 		B163BDE52744318200C985B7 /* SignIn */ = {
 			isa = PBXGroup;
 			children = (
-				B19BD5522745DF6D000E13CE /* ViewModel */,
-				B19BD5512745DF6A000E13CE /* Model */,
 				B19BD5422745DE75000E13CE /* StoryBoard */,
 				B19BD5412745DE6B000E13CE /* VC */,
 			);
@@ -254,8 +250,6 @@
 		B163BDF7274485D100C985B7 /* VerifySession */ = {
 			isa = PBXGroup;
 			children = (
-				B19BD54E2745DF51000E13CE /* ViewModel */,
-				B19BD54D2745DF4D000E13CE /* Model */,
 				B19BD53E2745DE46000E13CE /* StoryBoard */,
 				B19BD53D2745DE3F000E13CE /* VC */,
 			);
@@ -295,8 +289,6 @@
 		B19BD5312745764B000E13CE /* Message */ = {
 			isa = PBXGroup;
 			children = (
-				B19BD54C2745DF47000E13CE /* ViewModel */,
-				B19BD54B2745DF44000E13CE /* Model */,
 				B19BD53C2745DE35000E13CE /* VC */,
 			);
 			path = Message;
@@ -458,34 +450,6 @@
 			path = ViewModel;
 			sourceTree = "<group>";
 		};
-		B19BD54B2745DF44000E13CE /* Model */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Model;
-			sourceTree = "<group>";
-		};
-		B19BD54C2745DF47000E13CE /* ViewModel */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = ViewModel;
-			sourceTree = "<group>";
-		};
-		B19BD54D2745DF4D000E13CE /* Model */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Model;
-			sourceTree = "<group>";
-		};
-		B19BD54E2745DF51000E13CE /* ViewModel */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = ViewModel;
-			sourceTree = "<group>";
-		};
 		B19BD54F2745DF5F000E13CE /* Model */ = {
 			isa = PBXGroup;
 			children = (
@@ -500,57 +464,12 @@
 			path = ViewModel;
 			sourceTree = "<group>";
 		};
-		B19BD5512745DF6A000E13CE /* Model */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Model;
-			sourceTree = "<group>";
-		};
-		B19BD5522745DF6D000E13CE /* ViewModel */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = ViewModel;
-			sourceTree = "<group>";
-		};
-		B19BD5532745DF75000E13CE /* Model */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Model;
-			sourceTree = "<group>";
-		};
-		B19BD5542745DF78000E13CE /* ViewModel */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = ViewModel;
-			sourceTree = "<group>";
-		};
 		B19BD5552745DF83000E13CE /* Commons */ = {
 			isa = PBXGroup;
 			children = (
-				B19BD5592745DFAF000E13CE /* Extensions+Classes */,
 				B19BD5582745DFA4000E13CE /* Protocols */,
-				B19BD5572745DF9E000E13CE /* Models */,
-				B19BD5562745DF92000E13CE /* Repository */,
 			);
 			path = Commons;
-			sourceTree = "<group>";
-		};
-		B19BD5562745DF92000E13CE /* Repository */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Repository;
-			sourceTree = "<group>";
-		};
-		B19BD5572745DF9E000E13CE /* Models */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Models;
 			sourceTree = "<group>";
 		};
 		B19BD5582745DFA4000E13CE /* Protocols */ = {
@@ -559,13 +478,6 @@
 				B19BD55A2745EE04000E13CE /* CustomViewControllersProtocol.h */,
 			);
 			path = Protocols;
-			sourceTree = "<group>";
-		};
-		B19BD5592745DFAF000E13CE /* Extensions+Classes */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = "Extensions+Classes";
 			sourceTree = "<group>";
 		};
 		B1B7DEA8BFA7BDF8991ED97B /* Pods */ = {
