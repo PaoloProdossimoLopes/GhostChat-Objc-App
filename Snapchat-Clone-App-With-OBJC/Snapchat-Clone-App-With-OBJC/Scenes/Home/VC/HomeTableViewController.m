@@ -89,7 +89,11 @@
 
 - (void)addButtonHandleTapped {
     NSLog(@"DEBUG: Button tapped!");
-    UIViewController * vc = [[ListOfContatcsTableViewController alloc] init];
+    ListOfContatcsTableViewController * vc = [[ListOfContatcsTableViewController alloc] init];
+    ListOfContatctsViewModel *viewModel = [[ListOfContatctsViewModel alloc]init];
+    
+    vc.viewModel = viewModel;
+    
     [[self navigationController] pushViewController:vc animated:YES];
 }
 

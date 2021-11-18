@@ -14,6 +14,7 @@
 #import "MessageViewController.h"
 #import "CustomViewControllersProtocol.h"
 #import "HomeViewModel.h"
+#import "ListOfContatctsViewModel.h"
 
 NS_ASSUME_NONNULL_BEGIN
 

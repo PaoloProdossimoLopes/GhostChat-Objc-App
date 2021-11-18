@@ -31,6 +31,7 @@
 		B19BD5382745C395000E13CE /* MessageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B19BD5372745C395000E13CE /* MessageViewController.m */; };
 		B19BD55E274653F4000E13CE /* AddViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = B19BD55D274653F4000E13CE /* AddViewModel.m */; };
 		B19BD56327465DA7000E13CE /* HomeViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = B19BD56227465DA6000E13CE /* HomeViewModel.m */; };
+		B19BD56727466307000E13CE /* ListOfContatctsViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = B19BD56627466307000E13CE /* ListOfContatctsViewModel.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -92,6 +93,8 @@
 		B19BD55D274653F4000E13CE /* AddViewModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AddViewModel.m; sourceTree = "<group>"; };
 		B19BD56127465DA6000E13CE /* HomeViewModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HomeViewModel.h; sourceTree = "<group>"; };
 		B19BD56227465DA6000E13CE /* HomeViewModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HomeViewModel.m; sourceTree = "<group>"; };
+		B19BD56527466307000E13CE /* ListOfContatctsViewModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ListOfContatctsViewModel.h; sourceTree = "<group>"; };
+		B19BD56627466307000E13CE /* ListOfContatctsViewModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ListOfContatctsViewModel.m; sourceTree = "<group>"; };
 		DB1E26CD18517AC6A30B1661 /* Pods_Snapchat_Clone_App_With_OBJC.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Snapchat_Clone_App_With_OBJC.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F73761AFFD6EC61BD0D0E9ED /* Pods-Snapchat-Clone-App-With-OBJC.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Snapchat-Clone-App-With-OBJC.debug.xcconfig"; path = "Target Support Files/Pods-Snapchat-Clone-App-With-OBJC/Pods-Snapchat-Clone-App-With-OBJC.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -301,6 +304,7 @@
 		B19BD532274576B9000E13CE /* ListOfContatcs */ = {
 			isa = PBXGroup;
 			children = (
+				B19BD564274662F1000E13CE /* ViewModel */,
 				B19BD53B2745DE1B000E13CE /* VC */,
 			);
 			path = ListOfContatcs;
@@ -454,6 +458,15 @@
 			children = (
 				B19BD56127465DA6000E13CE /* HomeViewModel.h */,
 				B19BD56227465DA6000E13CE /* HomeViewModel.m */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		B19BD564274662F1000E13CE /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				B19BD56527466307000E13CE /* ListOfContatctsViewModel.h */,
+				B19BD56627466307000E13CE /* ListOfContatctsViewModel.m */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -653,6 +666,7 @@
 				B163BDFA274485EA00C985B7 /* VerifySessionViewController.m in Sources */,
 				B163BE002745053100C985B7 /* HomeTableViewController.m in Sources */,
 				B19BD55E274653F4000E13CE /* AddViewModel.m in Sources */,
+				B19BD56727466307000E13CE /* ListOfContatctsViewModel.m in Sources */,
 				B163BDB42744266D00C985B7 /* main.m in Sources */,
 				B163BDA62744266A00C985B7 /* SceneDelegate.m in Sources */,
 				B19BD535274576F4000E13CE /* ListOfContatcsTableViewController.m in Sources */,
