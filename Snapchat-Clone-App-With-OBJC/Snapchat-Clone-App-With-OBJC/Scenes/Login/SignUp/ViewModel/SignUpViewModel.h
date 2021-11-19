@@ -8,11 +8,13 @@
 #import <Foundation/Foundation.h>
 #import <FirebaseDatabase/FirebaseDatabase.h>
 #import <FirebaseAuth/FirebaseAuth.h>
+#import "UserInformationModel.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface SignUpViewModel : NSObject
-- (void)saveOnDataBase:(FIRUser*)user userInformation:(NSDictionary*)userInformation
+@interface SignUpViewModel : NSObject 
+
+- (void)saveOnDataBase:(UserInformationModel*)userInformation
      successCompletion:(void(^)(void))successCompletion
      failureCompletion: (void(^)(NSError*))failureCompletion;
 

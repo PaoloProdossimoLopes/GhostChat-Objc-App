@@ -6,6 +6,7 @@
 //
 
 #import "SignUpViewController.h"
+#import "UserInformationModel.h"
 
 @interface SignUpViewController()
 
@@ -85,14 +86,13 @@
 
 - (void)saveOnDataBase: (FIRUser*)user userInfo: (NSDictionary<NSString*,id>*)userInfo {
     
-    NSDictionary * userInformation = [[NSDictionary alloc] init];
-    userInformation = @{@"uid": user.uid,
-                        @"name": self.nameTextField.text,
-                        @"email": self.emailTextField.text,
-                        @"password": self.passwordTextField.text};
+    UserInformationModel *userInformation = [[UserInformationModel alloc]
+                                             init:user.uid
+                                             name:self.nameTextField.text
+                                             email:self.emailTextField.text
+                                             password:self.passwordTextField.text];
     
-    [self.viewModel saveOnDataBase:user userInformation: userInformation
-     successCompletion:^{
+    [self.viewModel saveOnDataBase: userInformation successCompletion:^{
         [self navigateToHomeView];
     } failureCompletion:^(NSError * _Nonnull error) {
         [self showCustomAlertDefault];

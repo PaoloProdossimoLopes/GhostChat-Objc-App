@@ -9,14 +9,14 @@
 
 @implementation SignUpViewModel
 
-- (void)saveOnDataBase:(FIRUser*)user userInformation:(NSDictionary*)userInformation
+- (void)saveOnDataBase:(UserInformationModel*)userInformation
      successCompletion:(void(^)(void))successCompletion
      failureCompletion: (void(^)(NSError*))failureCompletion {
-    
+
     FIRDatabaseReference* database = [[FIRDatabase database] reference];
-    FIRDatabaseReference* userReference = [[database child: @"user"] child: user.uid];
+    FIRDatabaseReference* userReference = [[database child: @"user"] child: userInformation.uid];
     
-    [userReference setValue: userInformation withCompletionBlock:^(NSError * _Nullable error, FIRDatabaseReference * _Nonnull ref) {
+    [userReference setValue: [userInformation getDictValue] withCompletionBlock:^(NSError * _Nullable error, FIRDatabaseReference * _Nonnull ref) {
         if (error == nil) { successCompletion(); }
         else { failureCompletion(error); }
     }];

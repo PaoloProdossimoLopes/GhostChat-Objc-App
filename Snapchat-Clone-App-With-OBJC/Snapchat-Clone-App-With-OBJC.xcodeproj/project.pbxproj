@@ -29,6 +29,7 @@
 		B163BE0427451A5F00C985B7 /* AddViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B163BE0327451A5F00C985B7 /* AddViewController.m */; };
 		B184476F2746C372005689D7 /* UIViewController+AlertExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = B184476E2746C372005689D7 /* UIViewController+AlertExtension.m */; };
 		B18447722746C78B005689D7 /* SignUpViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = B18447712746C78B005689D7 /* SignUpViewModel.m */; };
+		B184477A27472511005689D7 /* UserInformationModel.m in Sources */ = {isa = PBXBuildFile; fileRef = B184477927472511005689D7 /* UserInformationModel.m */; };
 		B19BD535274576F4000E13CE /* ListOfContatcsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B19BD534274576F4000E13CE /* ListOfContatcsTableViewController.m */; };
 		B19BD5382745C395000E13CE /* MessageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B19BD5372745C395000E13CE /* MessageViewController.m */; };
 		B19BD55E274653F4000E13CE /* AddViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = B19BD55D274653F4000E13CE /* AddViewModel.m */; };
@@ -94,6 +95,8 @@
 		B184476E2746C372005689D7 /* UIViewController+AlertExtension.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+AlertExtension.m"; sourceTree = "<group>"; };
 		B18447702746C78B005689D7 /* SignUpViewModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SignUpViewModel.h; sourceTree = "<group>"; };
 		B18447712746C78B005689D7 /* SignUpViewModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SignUpViewModel.m; sourceTree = "<group>"; };
+		B184477827472511005689D7 /* UserInformationModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UserInformationModel.h; sourceTree = "<group>"; };
+		B184477927472511005689D7 /* UserInformationModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UserInformationModel.m; sourceTree = "<group>"; };
 		B19BD533274576F4000E13CE /* ListOfContatcsTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ListOfContatcsTableViewController.h; sourceTree = "<group>"; };
 		B19BD534274576F4000E13CE /* ListOfContatcsTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ListOfContatcsTableViewController.m; sourceTree = "<group>"; };
 		B19BD5362745C395000E13CE /* MessageViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MessageViewController.h; sourceTree = "<group>"; };
@@ -312,6 +315,23 @@
 			path = Login;
 			sourceTree = "<group>";
 		};
+		B1844777274724E2005689D7 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				B184477B27472516005689D7 /* UserInformationModel */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		B184477B27472516005689D7 /* UserInformationModel */ = {
+			isa = PBXGroup;
+			children = (
+				B184477827472511005689D7 /* UserInformationModel.h */,
+				B184477927472511005689D7 /* UserInformationModel.m */,
+			);
+			path = UserInformationModel;
+			sourceTree = "<group>";
+		};
 		B19BD5312745764B000E13CE /* Message */ = {
 			isa = PBXGroup;
 			children = (
@@ -437,6 +457,7 @@
 		B19BD5552745DF83000E13CE /* Commons */ = {
 			isa = PBXGroup;
 			children = (
+				B1844777274724E2005689D7 /* Models */,
 				B1D5D2DC2746C2F7003BA54D /* Extensions+Class */,
 				B1D5D2CD27466C61003BA54D /* Router */,
 				B19BD5582745DFA4000E13CE /* Protocols */,
@@ -748,6 +769,7 @@
 				B19BD535274576F4000E13CE /* ListOfContatcsTableViewController.m in Sources */,
 				B19BD56327465DA7000E13CE /* HomeViewModel.m in Sources */,
 				B163BDE027442CA200C985B7 /* SplashViewController.m in Sources */,
+				B184477A27472511005689D7 /* UserInformationModel.m in Sources */,
 				B163BE0427451A5F00C985B7 /* AddViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
